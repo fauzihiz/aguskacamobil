@@ -1,0 +1,306 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin: 0 0 10px;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #F47C3C;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-secondary {
+    background-color: #0D63AC;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('image/hero.jpeg'); /* Path ke gambar hero Anda */
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 100px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay redup, bisa disesuaikan */
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2; /* Supaya teks ada di atas overlay */
+}
+
+.btn-primary {
+    background-color: #F47C3C;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 2; /* Menjaga tombol di atas overlay */
+}
+
+
+/* Advantages Section */
+.advantages {
+    background-color: #FFFFFF;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.advantages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.advantage-item {
+    background-color: #F47C3C;
+    color: #FFFFFF;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Call to Action Section */
+.cta {
+    background-color: #0D63AC;
+    color: #FFFFFF;
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Testimonial Section Styles */
+.testimonial {
+    background-color: #F47C3C; /* Background color for testimonial section */
+    color: #FFFFFF; /* Text color */
+    padding: 40px 20px;
+}
+
+.testimonial h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+/* Wrapper for reviews to display them in a flex container */
+.review-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.review {
+    background-color: #FFFFFF;
+    color: #000;
+    padding: 20px;
+    border-radius: 8px;
+    /*margin-bottom: 20px;*/
+    flex: 1 1 150px;  /*Flex properties for responsive columns */
+    /*max-width: 300px;  Set a max-width to control the card size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd; /* Thin border for card-like appearance */   
+}
+
+.reviewer {
+    font-weight: bold;
+    /*margin-bottom: 5px;*/
+}
+
+.rating {
+    /*margin-bottom: 10px;*/
+}
+
+.rating span {
+    color: #FFD700; /* Gold color for filled stars */
+    font-size: 1.2rem;
+}
+
+.star-empty {
+    color: #d3d3d3; /* Light grey color for empty stars */
+}
+
+.review-text {
+    /*margin: 0;*/
+    font-size: 0.9rem;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .review-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+/* Services Section */
+.services {
+    background-color: #0D63AC;
+    color: #FFFFFF;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+/* Service list container */
+.service-list {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+}
+
+/* List styles */
+.service-list ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Align text to the left */
+}
+
+.service-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* List item styles */
+.service-list li {
+    background-color: #FFFFFF;
+    color: #000;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow for card effect */
+    border: 1px solid #ddd; /* Thin border for card-like appearance */
+    max-width: 600px; /* Max width to keep content centered */
+}
+
+/* Icon styles */
+.checklist-icon {
+    color: #F47C3C; /* Icon color */
+    margin-right: 10px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .service-list {
+        padding: 0 20px; /* Add some padding on smaller screens */
+    }
+
+    .service-list ul {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .service-list li {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/* Gallery Section */
+.gallery {
+    background-color: #FFFFFF;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.gallery-carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Secondary Call to Action Section */
+.cta-secondary {
+    background-color: #F47C3C;
+    color: #FFFFFF;
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #FFFFFF;
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Responsive map container */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #0D63AC;
+    color: #FFFFFF;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsive Design (Mobile First) */
+@media (min-width: 768px) {
+    .advantages-list {
+        flex-direction: row;
+    }
+}
