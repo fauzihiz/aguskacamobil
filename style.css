@@ -37,7 +37,7 @@ h1, h2, h3 {
 /* Hero Section */
 .hero {
     position: relative;
-    background-image: url('image/hero.jpeg'); /* Path ke gambar hero Anda */
+    background-image: url('image/hero.webp'); /* Path ke gambar hero Anda */
     background-size: cover;
     background-position: center;
     color: #FFFFFF;
