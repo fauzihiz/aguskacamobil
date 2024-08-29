@@ -13,7 +13,7 @@
 
     <link rel="preload" href="image/hero.webp" as="image">
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) 
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11067145529">
 </script>
 <script>
@@ -22,21 +22,13 @@
   gtag('js', new Date());
 
   gtag('config', 'AW-11067145529');
-</script>
+</script>-->
 
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T8PT5J6B');</script>
-    <!-- End Google Tag Manager -->
+<!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=!0;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-T8PT5J6B');</script><!-- End Google Tag Manager -->
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8PT5J6B"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager(noscript)--><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8PT5J6B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager(noscript)-->
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
@@ -178,27 +170,9 @@
         </div>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const navList = document.getElementById('nav-list');
-            navList.classList.toggle('show');
-        }
-
-        let currentIndex = 0;
-
-        function showNextGallery() {
-        const items = document.querySelectorAll('.carousel-item');
-        items[currentIndex].style.transform = `translateX(-${currentIndex * 100}%)`;
-
-        currentIndex = (currentIndex + 1) % items.length;
-
-        items.forEach((item, index) => {
-            item.style.transform = `translateX(-${currentIndex * 100}%)`;
-        });
-        }
-
-        setInterval(showNextGallery, 3000); // Change gallery every 3 seconds
-    </script>
+    <script>function toggleMenu(){const navList=document.getElementById('nav-list');navList.classList.toggle('show')}
+        let currentIndex=0;function showNextGallery(){const items=document.querySelectorAll('.carousel-item');items[currentIndex].style.transform=`translateX(-${currentIndex * 100}%)`;currentIndex=(currentIndex+1)%items.length;items.forEach((item,index)=>{item.style.transform=`translateX(-${currentIndex * 100}%)`})}
+        setInterval(showNextGallery,3000);</script>
 </body>
 
 </body>

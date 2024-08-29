@@ -24,6 +24,7 @@ h1, h2, h3 {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    z-index: 2; /* Menjaga tombol di atas overlay */
 }
 
 .btn-secondary {
@@ -72,16 +73,6 @@ h1, h2, h3 {
         background-size: contain; /* Sesuaikan background size di layar kecil */
     }
 }
-
-.btn-primary {
-    background-color: #F47C3C;
-    color: #FFFFFF;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    z-index: 2; /* Menjaga tombol di atas overlay */
-}
-
 
 /* Advantages Section */
 .advantages {
@@ -300,7 +291,7 @@ h1, h2, h3 {
 /* Footer Section */
 .footer {
     background-color: #0D63AC;
-    color: #FFFFFF;
+    color: #FFA500;
     padding: 20px 0;
     text-align: center;
 }
