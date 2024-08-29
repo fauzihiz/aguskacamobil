@@ -28,7 +28,7 @@ h1, h2, h3 {
 
 .btn-secondary {
     background-color: #0D63AC;
-    color: #FFFFFF;
+    color: #000000;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -87,7 +87,7 @@ h1, h2, h3 {
 
 .advantage-item {
     background-color: #F47C3C;
-    color: #FFFFFF;
+    color: #000000;
     padding: 20px;
     border-radius: 5px;
 }
@@ -261,7 +261,7 @@ h1, h2, h3 {
 /* Secondary Call to Action Section */
 .cta-secondary {
     background-color: #F47C3C;
-    color: #FFFFFF;
+    color: #000000;
     padding: 60px 0;
     text-align: center;
 }
@@ -293,7 +293,7 @@ h1, h2, h3 {
 /* Footer Section */
 .footer {
     background-color: #0D63AC;
-    color: #FFFFFF;
+    color: #000000;
     padding: 20px 0;
     text-align: center;
 }
