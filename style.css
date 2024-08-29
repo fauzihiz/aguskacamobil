@@ -20,7 +20,7 @@ h1, h2, h3 {
 /* Button Styles */
 .btn-primary {
     background-color: #F47C3C;
-    color: #FFFFFF;
+    color: #000000;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -28,7 +28,7 @@ h1, h2, h3 {
 
 .btn-secondary {
     background-color: #0D63AC;
-    color: #000000;
+    color: #FFFFFF;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -37,9 +37,12 @@ h1, h2, h3 {
 /* Hero Section */
 .hero {
     position: relative;
+    background-color: #f47c3c; /* Warna latar belakang mirip dengan warna utama gambar */
     background-image: url('image/hero.webp'); /* Path ke gambar hero Anda */
-    background-size: cover;
-    background-position: center;
+    background-size: cover; /* Gambar menutupi seluruh area background */
+    background-position: center; /* Gambar berada di tengah */
+    background-attachment: scroll; /* Background bergerak saat halaman digulir */
+    background-repeat: no-repeat; /* Gambar tidak diulang */
     color: #FFFFFF;
     padding: 100px 0;
     text-align: center;
@@ -61,6 +64,13 @@ h1, h2, h3 {
     position: relative;
     z-index: 2; /* Supaya teks ada di atas overlay */
 }
+
+/* Media queries untuk layar yang lebih kecil */
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 0; /* Kurangi padding di layar kecil */
+        background-size: contain; /* Sesuaikan background size di layar kecil */
+    }
 
 .btn-primary {
     background-color: #F47C3C;
@@ -293,7 +303,7 @@ h1, h2, h3 {
 /* Footer Section */
 .footer {
     background-color: #0D63AC;
-    color: #000000;
+    color: #FFFFFF;
     padding: 20px 0;
     text-align: center;
 }
