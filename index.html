@@ -7,173 +7,512 @@
     <meta name="description" content="Pusat layanan kaca mobil Bekasi, spesialis bengkel kaca mobil terbaik di Bekasi.">
     <meta name="keywords" content="kaca mobil, kaca mobil Bekasi, bengkel kaca mobil Bekasi">
     <title>SPESIALIS KACA MOBIL - LAYANAN HOME SERVICE SE-JABODETABEK</title>
-    <link rel="preload" href="style.css" as="style">
-    <link rel="stylesheet" href="style.css">   
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-
     <link rel="preload" href="image/hero.webp" as="image">
-
-    <!-- Google tag (gtag.js) 
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11067145529">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-11067145529');
-</script>-->
-
-<!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=!0;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-T8PT5J6B');</script><!-- End Google Tag Manager -->
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=!0;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-T8PT5J6B');</script>
 </head>
 <body>
-    <!-- Google Tag Manager(noscript)--><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8PT5J6B"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager(noscript)-->
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="car-animation">
+                <i class="fas fa-car"></i>
+            </div>
+            <div class="loading-text">Memuat...</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-tools"></i>
+                <span>Agus Kaca Mobil</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link">Beranda</a>
+                <a href="#advantages" class="nav-link">Keunggulan</a>
+                <a href="#services" class="nav-link">Layanan</a>
+                <a href="#gallery" class="nav-link">Galeri</a>
+                <a href="#testimonials" class="nav-link">Testimoni</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
         <div class="container">
-            <h1>Pusat Jual & Pasang Kaca Mobil</h1>
-            <p>Menerima panggilan ke seluruh Wilayah JABODETABEK</p>
-            <button type="button" id="btn-cta" onclick="window.open('https://wa.me/6282258687220', '_blank')" class="btn-primary">Hubungi Kami</button>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Terpercaya Sejak 2010</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Pusat Jual & Pasang</span>
+                    <span class="title-highlight">Kaca Mobil</span>
+                </h1>
+                <p class="hero-subtitle">Menerima panggilan ke seluruh Wilayah JABODETABEK dengan layanan profesional dan bergaransi</p>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fas fa-home"></i>
+                        <span>Home Service</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Bergaransi</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Cepat & Rapi</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="https://wa.me/6282258687220" target="_blank" class="btn-primary pulse-animation">
+                        <i class="fab fa-whatsapp"></i>
+                        Hubungi Kami Sekarang
+                    </a>
+                    <div class="cta-info">
+                        <i class="fas fa-phone"></i>
+                        <span>Konsultasi Gratis 24/7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
     </section>
 
-    <!-- Keunggulan Utama -->
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="600">0</div>
+                    <div class="stat-label">Pelanggan Terlayani</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="stat-number" data-count="1000+">0</div>
+                    <div class="stat-label">Kaca Terpasang</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-label">Tahun Pengalaman</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <div class="stat-number" data-count="20">0</div>
+                    <div class="stat-label">Area Terlayani</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
     <section class="advantages" id="advantages">
         <div class="container">
-            <h2>Kenapa Memilih Jasa Kami?</h2>
-            <div class="advantages-list">
-                <div class="advantage-item">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Kenapa Memilih Jasa Kami?</h2>
+                <p class="section-subtitle">Kami memberikan pelayanan terbaik dengan standar profesional tinggi</p>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
                     <h3>Berpengalaman</h3>
                     <p>Dikerjakan oleh tenaga ahli / spesialis yang sudah berpengalaman di bidang nya, bukan tukang abal-abal, pengerjaan cepat & rapi.</p>
+                    <div class="card-highlight">5+ Tahun</div>
                 </div>
-                <div class="advantage-item">
+                <div class="advantage-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
                     <h3>Home Service</h3>
                     <p>Menerima pemasangan dirumah / dikantor Anda. Tidak perlu datang ke bengkel jika Anda sibuk.</p>
+                    <div class="card-highlight">100% Praktis</div>
                 </div>
-                <div class="advantage-item">
+                <div class="advantage-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
                     <h3>Bergaransi</h3>
                     <p>Kami memberikan garansi service kebocoran selama 1 tahun dalam pemakaian yang wajar.</p>
+                    <div class="card-highlight">1 Tahun</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta" id="cta">
-        <div class="container">
-            <h2>Dapatkan Penawaran Khusus</h2>
-            <p>Hubungi kami sekarang untuk mendapatkan pelayanan spesial.</p>
-            <button type="button" id="btn-cta" onclick="window.open('https://wa.me/6282258687220', '_blank')" class="btn-primary">Hubungi via WhatsApp</button>
-        </div>
-    </section>
-
-    <!-- Testimoni -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2>Apa Kata Pelanggan Kami?</h2>
-            <div class="review-wrapper">
-                <div class="review">
-                    <p class="reviewer"><strong>Kasimin Trio</strong></p>
-                    <div class="rating">
-                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
-                    </div>
-                    <p class="review-text">Teliti,rapi dan cepat pengerjaan nya,harga juga murah di bandingkan yg lain,sukses selalu omm👍 …</p>
-                </div>
-                <div class="review">
-                    <p class="reviewer"><strong>Bagas Juniarto</strong></p>
-                    <div class="rating">
-                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span class="star-empty">⭐</span>
-                    </div>
-                    <p class="review-text">Rekomendasi bngt bagi yg mau cari kaca mobil, stock melimpah dan pastinya ramah di kantong👍 …</p>
-                </div>
-                <div class="review">
-                    <p class="reviewer"><strong>Budi Saleh</strong></p>
-                    <div class="rating">
-                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span class="star-empty">⭐</span>
-                    </div>
-                    <p class="review-text">Bukan kaleng-kaleng wak....
-                        Pemasangan cukup profesional sekali..👍👍👍💪💪💪 …</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Layanan yang Ditawarkan -->
+    <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
-            <h2>Layanan Kami</h2>
-            <div class="service-list">
-                <ul>
-                    <li><span class="checklist-icon">✔</span> Penggantian Kaca Mobil</li>
-                    <li><span class="checklist-icon">✔</span> Pengiriman Kaca ke Seluruh Indonesia</li>
-                    <li><span class="checklist-icon">✔</span> Pemasangan ke Rumah Pelanggan</li>
-                    <li><span class="checklist-icon">✔</span> Pembuatan Kaca Custom</li>
-                    <li><span class="checklist-icon">✔</span> Garansi pemasangan 1 tahun.</li>
-                </ul>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Layanan Kami</h2>
+                <p class="section-subtitle">Solusi lengkap untuk semua kebutuhan kaca mobil Anda</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-right">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Penggantian Kaca Mobil</h3>
+                    <p>Penggantian kaca mobil dengan kualitas terbaik dan pemasangan profesional</p>
+                </div>
+                <div class="service-card" data-aos="fade-right" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Pengiriman Kaca ke Seluruh Indonesia</h3>
+                    <p>Layanan pengiriman kaca mobil ke seluruh Indonesia dengan packaging aman</p>
+                </div>
+                <div class="service-card" data-aos="fade-left">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Pemasangan ke Rumah Pelanggan</h3>
+                    <p>Pemasangan langsung di rumah atau kantor Anda dengan peralatan lengkap</p>
+                </div>
+                <div class="service-card" data-aos="fade-left" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Pembuatan Kaca Custom</h3>
+                    <p>Pembuatan kaca custom sesuai spesifikasi dan kebutuhan kendaraan Anda</p>
+                </div>
+                <div class="service-card full-width" data-aos="fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Garansi Pemasangan 1 Tahun</h3>
+                    <p>Kami memberikan garansi resmi untuk setiap pemasangan yang dilakukan tim ahli kami</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Galeri -->
+    <!-- Gallery Section -->
     <section class="gallery" id="gallery">
         <div class="container">
-            <h2>Galeri Pekerjaan Kami</h2>
-            <div class="gallery-carousel">
-                <div class="carousel-item">
-                    <img src="gallery/1.jpg" alt="hasil pekerjaan 1">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Galeri Pekerjaan Kami</h2>
+                <p class="section-subtitle">Lihat hasil kerja profesional kami</p>
+            </div>
+            <div class="gallery-grid" data-aos="fade-up">
+                <div class="gallery-item" data-category="before-after">
+                    <img src="gallery/1.jpg" alt="hasil pekerjaan 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Before & After</span>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="gallery/2.jpg" alt="hasil pekerjaan 2">
+                <div class="gallery-item" data-category="installation">
+                    <img src="gallery/2.jpg" alt="hasil pekerjaan 2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Proses Pemasangan</span>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="gallery/3.jpg" alt="hasil pekerjaan 3">
+                <div class="gallery-item" data-category="before-after">
+                    <img src="gallery/3.jpg" alt="hasil pekerjaan 3" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Before & After</span>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="gallery/4.jpg" alt="hasil pekerjaan 4">
+                <div class="gallery-item" data-category="result">
+                    <img src="gallery/4.jpg" alt="hasil pekerjaan 4" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Hasil Akhir</span>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="gallery/5.jpg" alt="hasil pekerjaan 5">
+                <div class="gallery-item" data-category="installation">
+                    <img src="gallery/5.jpg" alt="hasil pekerjaan 5" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Proses Pemasangan</span>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="gallery/6.jpg" alt="hasil pekerjaan 6">
+                <div class="gallery-item" data-category="result">
+                    <img src="gallery/6.jpg" alt="hasil pekerjaan 6" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Hasil Akhir</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-secondary" id="cta-secondary">
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
         <div class="container">
-            <h2>Tanyakan Kebutuhan Kaca Mobil Anda Sekarang</h2>
-            <button type="button" id="btn-cta" onclick="window.open('https://wa.me/6282258687220', '_blank')" class="btn-secondary">Hubungi Sekarang</button>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Apa Kata Pelanggan Kami?</h2>
+                <p class="section-subtitle">Testimoni nyata dari pelanggan yang telah merasakan layanan kami</p>
+            </div>
+            <div class="testimonials-carousel" data-aos="fade-up">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Teliti, rapi dan cepat pengerjaan nya, harga juga murah di bandingkan yg lain, sukses selalu omm👍</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Kasimin Trio</h4>
+                                <span>Pelanggan Setia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Rekomendasi bngt bagi yg mau cari kaca mobil, stock melimpah dan pastinya ramah di kantong👍</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Bagas Juniarto</h4>
+                                <span>Pelanggan Setia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Bukan kaleng-kaleng wak.... Pemasangan cukup profesional sekali..👍👍👍💪💪💪</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Budi Saleh</h4>
+                                <span>Pelanggan Setia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-nav">
+                <button class="nav-btn prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="nav-dots" id="navDots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+                <button class="nav-btn next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
         </div>
     </section>
 
-    <!-- Lokasi & Kontak -->
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Dapatkan Penawaran Khusus Hari Ini!</h2>
+                <p>Konsultasi gratis dan penawaran terbaik untuk kebutuhan kaca mobil Anda</p>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Konsultasi Gratis</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-truck"></i>
+                        <span>Home Service</span>
+                    </div>
+                </div>
+                <a href="https://wa.me/6282258687220" target="_blank" class="btn-cta">
+                    <i class="fab fa-whatsapp"></i>
+                    Hubungi via WhatsApp
+                    <div class="btn-shine"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2>Lokasi</h2>
-            <p><strong>Alamat:</strong> Jl. Raya Mustika jaya No. 53 Rt 002 Rw 011 Mustika jaya - kota Bekasi</p>
-            <div class="map-responsive">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.734700185382!2d107.02766787499101!3d-6.298551093690561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6991fd780cf109%3A0x10404a3db378fcbc!2sAgus%20kaca%20mobil!5e0!3m2!1sen!2sid!4v1724480569899!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="lokasi map bengkel agus kaca mobil"></iframe>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Lokasi & Kontak</h2>
+                <p class="section-subtitle">Kunjungi bengkel kami atau hubungi untuk layanan home service</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Alamat Bengkel</h3>
+                        <p>Jl. Raya Mustika jaya No. 53 Rt 002 Rw 011 Mustika jaya - kota Bekasi</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Hubungi Kami</h3>
+                        <p>+62 822-5868-7220</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Jam Operasional</h3>
+                        <p>Senin - Minggu: 08:00 - 17:00 WIB</p>
+                    </div>
+                </div>
+                <div class="map-container" data-aos="fade-left">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.734700185382!2d107.02766787499101!3d-6.298551093690561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6991fd780cf109%3A0x10404a3db378fcbc!2sAgus%20kaca%20mobil!5e0!3m2!1sen!2sid!4v1724480569899!5m2!1sen!2sid" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="lokasi map bengkel agus kaca mobil">
+                    </iframe>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer" id="footer">
+    <footer class="footer">
         <div class="container">
-            <p>&copy; Agus Kaca Mobil Powered by <a href="https://fauzihiz.github.io/">HIZ</a>.</p>
-            <p>All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-tools"></i>
+                        <span>Agus Kaca Mobil</span>
+                    </div>
+                    <p>Spesialis kaca mobil terpercaya di Bekasi dengan layanan home service ke seluruh JABODETABEK.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/6282258687220" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/agus_kacamobil/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@agus_kacamobil" target="_blank">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Layanan Kami</h3>
+                    <ul>
+                        <li><a href="#services">Penggantian Kaca Mobil</a></li>
+                        <li><a href="#services">Home Service</a></li>
+                        <li><a href="#services">Kaca Custom</a></li>
+                        <li><a href="#services">Pengiriman Indonesia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jl. Raya Mustika jaya No. 53, Bekasi</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+62 822-5868-7220</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>08:00 - 17:00 WIB</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Agus Kaca Mobil. Powered by <a href="https://fauzihiz.github.io/" target="_blank">Fauzi Hiz</a>. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <script>function toggleMenu(){const navList=document.getElementById('nav-list');navList.classList.toggle('show')}
-        let currentIndex=0;function showNextGallery(){const items=document.querySelectorAll('.carousel-item');items[currentIndex].style.transform=`translateX(-${currentIndex * 100}%)`;currentIndex=(currentIndex+1)%items.length;items.forEach((item,index)=>{item.style.transform=`translateX(-${currentIndex * 100}%)`})}
-        setInterval(showNextGallery,3000);</script>
-</body>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6282258687220" target="_blank" class="floating-wa" id="floatingWA">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wa-tooltip">Chat di WhatsApp</span>
+    </a>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8PT5J6B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <script src="script.js"></script>
 </body>
 </html>
