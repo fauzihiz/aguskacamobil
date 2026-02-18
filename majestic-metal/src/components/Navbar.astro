@@ -1,7 +1,11 @@
+---
+// Inline SVG for Logo (Critical Path)
+const logoIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="24" height="24" fill="currentColor"><path d="M208 352c-2.39 0-4.74.35-7 1l-33.44-95.06a48 48 0 1 0-93.12 0L41 353c-2.26-.65-4.61-1-7-1a32 32 0 0 0 0 64c2.39 0 4.74-.35 7-1l33.44 95.06a48 48 0 1 0 93.12 0L201 415c2.26.65 4.61 1 7 1a32 32 0 0 0 0-64zM96 256a16 16 0 1 1 16 16 16 16 0 0 1-16-16zm32 224a16 16 0 1 1 16-16 16 16 0 0 1-16 16zM606 352c-2.39 0-4.74.35-7 1l-33.44-95.06a48 48 0 1 0-93.12 0L439 353c-2.26-.65-4.61-1-7-1a32 32 0 0 0 0 64c2.39 0 4.74-.35 7-1l33.44 95.06a48 48 0 1 0 93.12 0L599 415c2.26.65 4.61 1 7 1a32 32 0 0 0 0-64zM494 256a16 16 0 1 1 16 16 16 16 0 0 1-16-16zm32 224a16 16 0 1 1 16-16 16 16 0 0 1-16 16zM0 128a128 128 0 0 1 128-128h384a128 128 0 0 1 128 128v128h-64v-128a64 64 0 0 0-64-64H128a64 64 0 0 0-64 64v128H0z"/></svg>';
+---
 <nav class="navbar" id="navbar">
     <div class="nav-container">
         <div class="nav-logo">
-            <i class="fas fa-tools"></i>
+            <span class="icon-logo" set:html={logoIcon}></span>
             <span>Agus Kaca Mobil</span>
         </div>
         <div class="nav-menu" id="navMenu">
@@ -19,3 +23,12 @@
         </button>
     </div>
 </nav>
+
+<style>
+    .icon-logo {
+        margin-right: 0.5rem;
+        color: #F47C3C;
+        display: flex;
+        align-items: center;
+    }
+</style>

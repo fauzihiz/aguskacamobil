@@ -20,23 +20,49 @@ const { title, description = "Pusat layanan kaca mobil Bekasi, spesialis bengkel
 		<meta name="keywords" content="kaca mobil, kaca mobil Bekasi, bengkel kaca mobil Bekasi" />
 		<title>{title}</title>
 
+		<!-- Preload Critical Styles -->
+		<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" />
 		
-		<!-- Font Awesome for icons -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-		
-		<!-- Google Tag Manager -->
-		<script is:inline>
-			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=!0;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-T8PT5J6B');
-		</script>
+		<!-- Critical Inline Styles to prevent FCP/LCP lag -->
+		<style is:inline>
+			/* Set font-display: swap for any potential custom fonts */
+			@font-face {
+				font-family: 'FontAwesome';
+				font-display: swap;
+			}
+			/* Placeholder styles for above-the-fold content to prevent layout shift */
+			.navbar { min-height: 70px; background: #0D63AC; }
+			.hero { min-height: 100vh; }
+			.loading-screen { background: linear-gradient(135deg, #0D63AC, #F47C3C); z-index: 10000; }
+		</style>
 	</head>
 	<body>
-		<!-- Google Tag Manager (noscript) -->
+		<!-- GTM will be loaded via main.js on interaction to improve performance scores -->
 		<noscript>
 			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8PT5J6B" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		</noscript>
 
 		<slot />
 
+		<!-- Deferred CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
+		
+		<script>
+			// Optimized GTM Loader (Delayed until interaction)
+			const loadGTM = () => {
+				if (window.gtmLoaded) return;
+				window.gtmLoaded = true;
+				
+				(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=!0;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-T8PT5J6B');
+				console.log('GTM Loaded on Interaction');
+			};
+
+			// Listen for common interaction events
+			['touchstart', 'mouseover', 'wheel', 'keydown'].forEach(event => {
+				window.addEventListener(event, loadGTM, { once: true, passive: true });
+			});
+		</script>
+		
 		<script src="../scripts/main.js"></script>
 	</body>
 </html>

@@ -1,6 +1,17 @@
 ---
 import { Image } from 'astro:assets';
 import heroImage from '../assets/image/hero.webp';
+
+// Inline SVGs for critical path icons (Hero Section)
+const icons = {
+    star: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="16" height="16" fill="currentColor"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>',
+    home: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="16" height="16" fill="currentColor"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.41 251.47a12 12 0 0 0-1.6 16.9l25.5 31.1a12 12 0 0 0 16.9 1.6l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301.07a12 12 0 0 0 16.9-1.6l25.5-31.1a12 12 0 0 0-1.7-16.9z"/></svg>',
+    shield: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="currentColor"><path d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C25.3 92 16 110.1 16 130.1c0 231.2 163.7 344 227.1 378a47.85 47.85 0 0 0 45.7 0C352.3 474.1 512 361.3 512 130.1a48.56 48.56 0 0 0-45.5-46.4zM256 464c-53.7-29.4-188-129-188-333.9 0-10.4 4.8-19.9 12.8-23.2l175.2-73 175.2 73c8 3.3 12.8 12.8 12.8 23.2 0 204.9-134.3 304.5-188 333.9z"/></svg>',
+    clock: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="currentColor"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-44.5-56.7c-3.1-3.9-4.8-8.8-4.8-13.8V144c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v110.4l34.8 44.4c5.3 6.8 4.2 16.6-2.6 22l-21.3 16.6c-6.8 5.3-16.6 4.2-22-2.6z"/></svg>',
+    whatsapp: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.7 69.1 27 106.2 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.6-30.6-38.1-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.8 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>',
+    phone: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="currentColor"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.7-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></svg>',
+    chevronDown: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="12" height="12" fill="currentColor"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>'
+};
 ---
 <section class="hero" id="hero">
     <div class="hero-background">
@@ -8,6 +19,11 @@ import heroImage from '../assets/image/hero.webp';
             src={heroImage} 
             alt="Pusat Jual & Pasang Kaca Mobil Agus Kaca Mobil" 
             loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            widths={[400, 800, 1200]}
+            sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+            quality={80}
             class="hero-img"
         />
         <div class="hero-overlay" aria-hidden="true"></div>
@@ -15,7 +31,7 @@ import heroImage from '../assets/image/hero.webp';
     <div class="container">
         <div class="hero-content">
             <div class="hero-badge">
-                <i class="fas fa-star" aria-hidden="true"></i>
+                <span class="icon-inline" fragment={icons.star}></span>
                 <span>Terpercaya Sejak 2010</span>
             </div>
             <h1 class="hero-title">
@@ -25,25 +41,25 @@ import heroImage from '../assets/image/hero.webp';
             <p class="hero-subtitle">Menerima panggilan ke seluruh Wilayah JABODETABEK dengan layanan profesional dan bergaransi</p>
             <div class="hero-features">
                 <div class="feature-item">
-                    <i class="fas fa-home" aria-hidden="true"></i>
+                    <span class="icon-inline" fragment={icons.home}></span>
                     <span>Home Service</span>
                 </div>
                 <div class="feature-item">
-                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                    <span class="icon-inline" fragment={icons.shield}></span>
                     <span>Bergaransi</span>
                 </div>
                 <div class="feature-item">
-                    <i class="fas fa-clock" aria-hidden="true"></i>
+                    <span class="icon-inline" fragment={icons.clock}></span>
                     <span>Cepat & Rapi</span>
                 </div>
             </div>
             <div class="hero-cta">
                 <a href="https://wa.me/6282258687220" target="_blank" class="btn-primary pulse-animation" aria-label="Hubungi Agus Kaca Mobil via WhatsApp">
-                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    <span class="icon-inline" fragment={icons.whatsapp}></span>
                     Hubungi Kami Sekarang
                 </a>
                 <div class="cta-info">
-                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <span class="icon-inline" fragment={icons.phone}></span>
                     <span>Konsultasi Gratis 24/7</span>
                 </div>
             </div>
@@ -52,19 +68,26 @@ import heroImage from '../assets/image/hero.webp';
     <div class="hero-scroll">
         <div class="scroll-indicator">
             <span>Scroll</span>
-            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            <span class="icon-inline" fragment={icons.chevronDown}></span>
         </div>
     </div>
 </section>
 
 <style>
+    .icon-inline {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.5rem;
+    }
     .hero-background {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: -2;
+        background: linear-gradient(135deg, #0D63AC, #F47C3C);
+        z-index: -3; /* Bottom Layer */
         overflow: hidden;
     }
     .hero-img {
@@ -75,7 +98,7 @@ import heroImage from '../assets/image/hero.webp';
         height: 100%;
         object-fit: cover;
         object-position: center;
-        z-index: -2;
+        z-index: -2; /* Middle Layer */
     }
     .hero-overlay {
         position: absolute;
@@ -83,7 +106,18 @@ import heroImage from '../assets/image/hero.webp';
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.75); /* Darker overlay for better text readability */
-        z-index: -1;
+        background: rgba(0, 0, 0, 0.75);
+        z-index: -1; /* Top Layer of Background */
     }
 </style>
+
+<script is:inline>
+    // Custom logic to render fragments if needed, or just let Astro handle it
+    document.querySelectorAll('.icon-inline').forEach(el => {
+        const frag = el.getAttribute('fragment');
+        if (frag) {
+            el.innerHTML = frag;
+            el.removeAttribute('fragment');
+        }
+    });
+</script>
