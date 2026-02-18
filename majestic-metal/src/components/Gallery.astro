@@ -1,0 +1,55 @@
+---
+import { Image } from 'astro:assets';
+
+// Import images from src/assets/gallery/
+import gallery1 from '../assets/gallery/1.jpg';
+import gallery2 from '../assets/gallery/2.jpg';
+import gallery3 from '../assets/gallery/3.jpg';
+import gallery4 from '../assets/gallery/4.jpg';
+import gallery5 from '../assets/gallery/5.jpg';
+import gallery6 from '../assets/gallery/6.jpg';
+
+const galleryItems = [
+    { src: gallery1, alt: "Hasil penggantian kaca depan mobil sedan - Agus Kaca Mobil", category: "before-after", label: "Before & After" },
+    { src: gallery2, alt: "Proses pemasangan kaca mobil oleh teknisi ahli - Agus Kaca Mobil", category: "installation", label: "Proses Pemasangan" },
+    { src: gallery3, alt: "Kaca mobil retak sebelum diganti - Agus Kaca Mobil", category: "before-after", label: "Before & After" },
+    { src: gallery4, alt: "Hasil akhir pemasangan kaca mobil rapi dan bersih - Agus Kaca Mobil", category: "result", label: "Hasil Akhir" },
+    { src: gallery5, alt: "Teknisi sedang mengoleskan sealant kaca mobil - Agus Kaca Mobil", category: "installation", label: "Proses Pemasangan" },
+    { src: gallery6, alt: "Tampilan kaca mobil baru setelah terpasang sempurna - Agus Kaca Mobil", category: "result", label: "Hasil Akhir" },
+];
+---
+<section class="gallery" id="gallery">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Galeri Pekerjaan Kami</h2>
+            <p class="section-subtitle">Lihat hasil kerja profesional kami dalam menangani berbagai jenis kaca mobil</p>
+        </div>
+        <div class="gallery-grid" data-aos="fade-up">
+            {galleryItems.map((item) => (
+                <div class="gallery-item" data-category={item.category} role="button" aria-label={`Lihat detail: ${item.label}`}>
+                    <Image 
+                        src={item.src} 
+                        alt={item.alt} 
+                        width={400} 
+                        height={300} 
+                        format="webp"
+                        class="gallery-img"
+                    />
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus" aria-hidden="true"></i>
+                        <span>{item.label}</span>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    .gallery-img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+</style>

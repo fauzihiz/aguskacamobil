@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Stats from '../components/Stats.astro';
+import Advantages from '../components/Advantages.astro';
+import Services from '../components/Services.astro';
+import Gallery from '../components/Gallery.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CTA from '../components/CTA.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+
+// SPESIALIS KACA MOBIL - LAYANAN HOME SERVICE SE-JABODETABEK
+const title = "SPESIALIS KACA MOBIL - LAYANAN HOME SERVICE SE-JABODETABEK";
+---
+
+<Layout title={title}>
+	<Navbar />
+	<main>
+		<Hero />
+		<Stats />
+		<Advantages />
+		<Services />
+		<Gallery />
+		<Testimonials />
+		<CTA />
+		<Contact />
+	</main>
+	<Footer />
+</Layout>

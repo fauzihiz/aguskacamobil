@@ -1,0 +1,89 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../assets/image/hero.webp';
+---
+<section class="hero" id="hero">
+    <div class="hero-background">
+        <Image 
+            src={heroImage} 
+            alt="Pusat Jual & Pasang Kaca Mobil Agus Kaca Mobil" 
+            loading="eager"
+            class="hero-img"
+        />
+        <div class="hero-overlay" aria-hidden="true"></div>
+    </div>
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <span>Terpercaya Sejak 2010</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Pusat Jual & Pasang</span>
+                <span class="title-highlight">Kaca Mobil</span>
+            </h1>
+            <p class="hero-subtitle">Menerima panggilan ke seluruh Wilayah JABODETABEK dengan layanan profesional dan bergaransi</p>
+            <div class="hero-features">
+                <div class="feature-item">
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                    <span>Home Service</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                    <span>Bergaransi</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-clock" aria-hidden="true"></i>
+                    <span>Cepat & Rapi</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="https://wa.me/6282258687220" target="_blank" class="btn-primary pulse-animation" aria-label="Hubungi Agus Kaca Mobil via WhatsApp">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    Hubungi Kami Sekarang
+                </a>
+                <div class="cta-info">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <span>Konsultasi Gratis 24/7</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        overflow: hidden;
+    }
+    .hero-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: -2;
+    }
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.75); /* Darker overlay for better text readability */
+        z-index: -1;
+    }
+</style>
